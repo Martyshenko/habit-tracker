@@ -14,10 +14,10 @@ public final class HabitContract {
         public static final String TABLE_NAME = "habits";
 
         public static final String _ID = BaseColumns._ID;
-        public static final String COLUMN_DAY = "day of the week";
-        public static final String COLUMN_FIRST_HABIT = "morning exercise";
-        public static final String COLUMN_SECOND_HABIT = "a glass of water";
-        public static final String COLUMN_THIRD_HABIT = "healthy breakfast";
+        public static final String COLUMN_DAY = "day_of_the_week";
+        public static final String COLUMN_FIRST_HABIT = "morning_exercise";
+        public static final String COLUMN_SECOND_HABIT = "a_glass_of_water";
+        public static final String COLUMN_THIRD_HABIT = "healthy_breakfast";
         public static final String COLUMN_FOURTH_HABIT = "meditation";
 
         //values for every habit
