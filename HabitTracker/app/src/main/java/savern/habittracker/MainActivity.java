@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         values.put(HabitEntry.COLUMN_FOURTH_HABIT, HabitEntry.HABIT_IS_DONE);
 
         db.insert(HabitEntry.TABLE_NAME, null, values);
+        db.close();
     }
 
     private Cursor readResults() {
@@ -49,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         };
 
         Cursor cursor = db.query(HabitEntry.TABLE_NAME, projection, null, null, null, null, null);
-
         return cursor;
     }
 }

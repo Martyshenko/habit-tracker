@@ -8,6 +8,7 @@ import savern.habittracker.data.HabitContract.HabitEntry;
 
 public class HabitDbHelper extends SQLiteOpenHelper {
 
+    public static final String SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS " + HabitEntry.TABLE_NAME;
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "habits.db";
 
@@ -34,5 +35,9 @@ public class HabitDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL(SQL_DELETE_ENTRIES);
+        onCreate(db);
     }
+
+
 }
